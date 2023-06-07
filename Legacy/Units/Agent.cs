@@ -6,7 +6,6 @@ using Items;
 using GameSystems;
 using Pathfinding;
 using Zenject;
-using Develop.Behaviour.Modules;
 //using EquipmentModule = Units.Modules.EquipmentModule;
 
 namespace Units
@@ -21,7 +20,7 @@ namespace Units
         public AnimationModule aModule;
         InventoryModule iModule;
         //EquipmentModule eModule;
-        public HealthModule hModule;
+        //public HealthModule hModule;
         public CharacterSkeletonModule csModule;
         protected Rigidbody2D rgbd;
         public InventoryInfoPreset inventoryPreset;

@@ -1,17 +1,11 @@
-namespace Infrastructure.States
-{
-    public interface IState : IExitableState
-    {
-        void Enter();
-    }
-    
-    public interface IPayloadState<TPayload> : IExitableState
-    {
-        void Enter(TPayload payLoad);
-    }
+using System.Collections.Generic;
 
-    public interface IExitableState
+namespace Infrastructure.StateMachine
+{
+    public interface IState
     {
-        void Exit();
+        void Enter(IIndexStateMachineUser user);
+        void Exit(IIndexStateMachineUser user);
+        void Process(IIndexStateMachineUser user);
     }
 }
